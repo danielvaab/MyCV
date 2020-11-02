@@ -339,7 +339,6 @@
                   </div>
                   <div class="mb-3">
                     <div class="loading">Loading</div>
-                    <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div>
                   </div>
                   <div class="text-center"><button onClick="sendEmail()" type="submit">Send Message</button></div>
@@ -397,9 +396,7 @@
     function sendEmail() { 
       console.log($("#name1").val());
       Email.send({ 
-        Host: "smtp.gmail.com", 
-        Username: "danielva.empresa@gmail.com", 
-        Password: "RealM888", 
+        SecureToken: "cdd541bf-340a-4dc4-83e8-cf00c37d6c0f"; 
         To: 'danielvasquez888.dv@gmail.com', 
         From: $("#mail").val(),
         Subject: "Contacto por pagina web por "+ $("#name").val(), 
