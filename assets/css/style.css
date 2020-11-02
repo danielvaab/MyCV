@@ -1011,10 +1011,15 @@ section {
 
 .contact .php-email-form input {
   height: 44px;
+  background-color: #eef7ff;
+}
+.contact .php-email-form ::-webkit-input-placeholder{
+  color:#27639B;
 }
 
 .contact .php-email-form textarea {
   padding: 10px 12px;
+  background-color: #eef7ff;
 }
 
 .contact .php-email-form button[type="submit"] {
