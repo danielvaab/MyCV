@@ -334,7 +334,7 @@
                     <div class="validate"></div>
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <textarea class="form-control" name="message" rows="5" id="TextArea" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                     <div class="validate"></div>
                   </div>
                   <div class="text-center"><button onClick="sendEmail()" type="submit">Send Message</button></div>
@@ -394,8 +394,8 @@
         SecureToken: '75f8c6fe-2404-4a4c-a28e-6505bb290e69',
         To: 'danielvasquez888.dv@gmail.com', 
         From: $("#email").val(),
-        Subject: "Cordial Saludo", 
-        Body: "Well that was easy!!", 
+        Subject: $("#name").val() + " Contacto pagina web", 
+        Body: $("#TextArea").val(), 
       }) 
         .then(function (message) { 
           alert("mail sent successfully") 
