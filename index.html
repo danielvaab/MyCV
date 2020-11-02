@@ -395,7 +395,9 @@
   <script>
     function sendEmail() { 
       Email.send({ 
-        SecureToken: "16043305-eb8c-4a2c-a9d0-fa24d4cee892",
+        Host: "smtp.gmail.com", 
+        Username: "danielva.empresa@gmail.com", 
+        Password: "RealM888",
         To: 'danielvasquez888.dv@gmail.com', 
         From: $("#mail").val(),
         Subject: "Contacto por pagina web por "+ $("#name").val(), 
