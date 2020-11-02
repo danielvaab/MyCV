@@ -334,11 +334,12 @@
                     <div class="validate"></div>
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" id="textArea" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                     <div class="validate"></div>
                   </div>
                   <div class="mb-3">
                     <div class="loading">Loading</div>
+                    <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div>
                   </div>
                   <div class="text-center"><button onClick="sendEmail()" type="submit">Send Message</button></div>
@@ -397,14 +398,15 @@
       Email.send({ 
         Host: "smtp.gmail.com", 
         Username: "danielva.empresa@gmail.com", 
-        Password: "RealM888",
+        Password: "RealM888", 
         To: 'danielvasquez888.dv@gmail.com', 
-        From: $("#mail").val(),
-        Subject: "Contacto por pagina web por "+ $("#name").val(), 
-        Body: $("#textArea").val(), 
+        From: 'danielva.empresa@gmail.com',
+        Subject: "Cordial Saludo", 
+        Body: "Well that was easy!!", 
       }) 
         .then(function (message) { 
           alert("mail sent successfully") 
+          console.log(Host)
         });
     } 
   </script>
