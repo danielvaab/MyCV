@@ -338,6 +338,10 @@
                     <textarea class="form-control" name="message" rows="5" id="TextArea" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
                     <div class="validate"></div>
                   </div>
+                  <div class="mb-3">
+                    <div class="loading">Enviando...</div>
+                    <div class="error-message"></div>
+                  </div>
                   <div class="text-center"><button onClick="sendEmail()" type="submit">Enviar</button></div>
                 </form>
     
@@ -398,8 +402,11 @@
         Subject: $("#subject").val(), 
         Body: $("#TextArea").val(), 
       }) 
-        .then(function (message) { 
-          alert("mail sent successfully") 
+        .then(function () { 
+          $("#email").val("");
+          $("#subject").val("");
+          $("#name").val("");
+          $("#TextArea").val("");
         });
     } 
   </script>

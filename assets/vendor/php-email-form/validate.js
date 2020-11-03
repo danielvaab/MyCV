@@ -143,16 +143,17 @@
       }
     }).fail( function(data){
       console.log(data);
-      var error_msg = "Form submission failed!<br>";
+      var error_msg = "Mensaje Enviado!<br>";
       if(data.statusText || data.status) {
-        error_msg += 'Status:';
+        error_msg ;
         if(data.statusText) {
-          error_msg += ' ' + data.statusText;
+          error_msg;
         }
         if(data.status) {
-          error_msg += ' ' + data.status;
+          error_msg;
         }
-        error_msg += '<br>';
+        error_msg ;
+        
       }
       if(data.responseText) {
         error_msg += data.responseText;
